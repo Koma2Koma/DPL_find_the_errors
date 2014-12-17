@@ -16,7 +16,7 @@ class PostsController < ApplicationController
   end
 
   def create
-    @post = Post.new(params[:id])
+    @post = Post.new(post_params)         ##### The parameters passed to the .new method were incorrect #########
     if @post.save
       redirect_to @post, notice: 'Post was successfully created.'
     else
