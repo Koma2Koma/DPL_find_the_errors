@@ -26,7 +26,7 @@ class TasksController < ApplicationController
 
   def update
     if @task.update(task_params)
-      redirect_to @tasks, notice: 'Task was successfully updated.'
+      redirect_to @task, notice: 'Task was successfully updated.'  ###### REMOVED unnessesary 's' in '@tasks' ####
     else
       render :edit
     end
