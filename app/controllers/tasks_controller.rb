@@ -2,7 +2,7 @@ class TasksController < ApplicationController
   before_action :set_task, only: [:show, :edit, :update, :destroy]
 
   def index
-    @tasks = Task.all                               ######## '@task' was changed to '@tasks' #########
+    @tasks = Task.all                                 ######## '@task' was changed to '@tasks' #########
   end
 
   def show
@@ -38,7 +38,7 @@ class TasksController < ApplicationController
   end
 
   private
-    def set_tasks
+    def set_task                        ######  REMOVED unnecessary 's'  -- set_tasks became set_task  ###########
       @task = Task.find(params[:id])
     end
 
