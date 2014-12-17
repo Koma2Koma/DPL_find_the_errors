@@ -15,7 +15,7 @@
         <td><%= task.description %></td>
         <td><%= task.priority %></td>
         <td><%= link_to 'Show', task %></td>
-        <td><%= link_to 'Edit', edit_task_path %></td>
+        <td><%= link_to 'Edit', edit_task_path(task) %></td>  <!-- ##### ADDED parameter to the route ###### -->
         <td><%= link_to 'Destroy', task, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
